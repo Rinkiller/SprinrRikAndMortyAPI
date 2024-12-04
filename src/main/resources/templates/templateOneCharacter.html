@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Rick and Morty spring API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container contone">
+
+            <div class="contentbyone">
+                <img th:src="${result.image}" class="imgone" alt="${result.image}">
+                <div class="texttable">
+                    <!--private String name;
+                    private String status;
+                    private String species;
+                    private String type;
+                    private String gender;
+                    private String image;
+                    private String url;
+                    private Date created;-->
+                    <div class="h2one">
+                        <h2> Имя: </h2>
+                        <h2 th:text=" ${result.name}">1</h2>
+                    </div>
+                    <div class="textone">
+                        <p>Текущий статус: </p>
+                        <p th:text=" ${result.status}">1</p>
+                    </div>
+                    <div class="textone">
+                        <p>Тип или подвид персонажа.: </p>
+                        <p th:text=" ${result.type}">1</p>
+                    </div>
+                    <div class="textone">
+                        <p>Пол персонажа («Женский», «Мужской», «Без пола» или «Неизвестно»: </p>
+                        <p th:text=" ${result.gender}">1</p>
+                    </div>
+                    <div class="textone">
+                        <p>Вид персонажа.: </p>
+                        <p th:text=" ${result.species}">1</p>
+                    </div>
+                    <div class="textone">
+                        <p>Время, в которое персонаж был создан в базе данных.: </p>
+                        <p th:text=" ${result.created}">1</p>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>

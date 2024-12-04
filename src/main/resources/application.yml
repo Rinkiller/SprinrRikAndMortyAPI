@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: RikAndMortiAPIUrlDownloader
+urlconfiguration:
+  url: "https://rickandmortyapi.com/api/character"

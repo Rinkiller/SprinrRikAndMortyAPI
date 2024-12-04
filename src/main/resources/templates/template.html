@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Rick and Morty spring API</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+    <center>
+        <div class="container header">
+            <h1 class="heder_text">RinCompani</h1>
+        </div>
+        <div class="container content">
+            <th:block th:each="character : ${results}">
+               <div class="box_character">
+                    <img th:src="${character.image}" class="img" alt="${character.image}">
+                    <div class="textdiv">
+                        <a th:href="@{/{id}(id=${character.id})}" th:text="${character.name}" class="namedtext">1</a>
+                    </div>
+               </div>
+            </th:block>
+
+            <a href="/prev"><button class="button">previous</button></a>
+            <a href="/next"><button class="button">next</button></a>
+        </div>
+    </center>
+    </body>
+</html>
